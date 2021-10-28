@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Converter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Conversor de Moedas</h2>
+<br />
+<h3>Digite o valor em Reais</h3>
+<br />
+
+@using (Html.BeginForm("Converter", "Moeda", FormMethod.Post))
+{
+    <input type="text" id="CampoValor" name="CampoValor" value="@ViewBag.TotalReal" />
+    <button type="submit">Calcular</button>
+}
+
+<br />
+<span>USD</span><strong>@ViewBag.TotalDolar</strong>
+<br />
+<span>EUR</span><strong>@ViewBag.TotalEuro</strong>
+<br />
+<span>BTC</span><strong>@ViewBag.TotalBtc</strong>
+<br />
