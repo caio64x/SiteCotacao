@@ -6,19 +6,21 @@
 
 <h2>Conversor de Moedas</h2>
 <br />
-<h3>Digite o valor em Reais</h3>
-<br />
 
-@using (Html.BeginForm("Converter", "Moeda", FormMethod.Post))
-{
-    <input type="text" id="CampoValor" name="CampoValor" value="@ViewBag.TotalReal" />
-    <button type="submit">Calcular</button>
-}
+
+    
+    <br />
+    <h5>Digite o valor em Reais</h5>
+    @using (Html.BeginForm("Converter", "Moeda", FormMethod.Post))
+    {
+        <input style="width:30%; font-size: 18px"  type="text" id="CampoValor" name="CampoValor" value="@ViewBag.TotalReal" />
+        <button type="submit">Calcular</button>
+    }
 
 <br />
-<span>USD</span><strong>@ViewBag.TotalDolar</strong>
+<span>USD</span>&nbsp;<strong>@ViewBag.TotalDolar</strong>
 <br />
-<span>EUR</span><strong>@ViewBag.TotalEuro</strong>
+<span>EUR</span>&nbsp;<strong>@ViewBag.TotalEuro</strong>
 <br />
-<span>BTC</span><strong>@ViewBag.TotalBtc</strong>
+<span>BTC</span>&nbsp;<strong>@ViewBag.TotalBtc</strong>
 <br />
